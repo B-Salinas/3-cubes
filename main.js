@@ -12,8 +12,8 @@ document.body.appendChild(renderer.domElement);
 // Add Orbit Controls
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
-controls.dampingFactor = 0.5;
-controls.rotateSpeed = 0.5;
+controls.dampingFactor = 0.1;
+controls.rotateSpeed = 0.1;
 controls.zoomSpeed = 1.2;
 
 // Golden ratio constants
@@ -52,8 +52,8 @@ cubeGroups.forEach(group => scene.add(group));
 camera.position.z = 1.5;
 
 // Animation variables with different speeds for each group
-const baseRotationSpeed = 0.1;
-const speedMultipliers = [1, 1.01, 1.0125];
+const baseRotationSpeed = 0.9;
+const speedMultipliers = [0.1, 1.01, 1.125];
 const delayOffset = Math.PI / 8;
 
 // Animation loop
